@@ -10,14 +10,16 @@ module.exports = {
         port: 8080,
         contentBase: './public'
     },
-    modules: {
-        loaders: [{
-            test: /.jsx?$/,
-            loader: 'babel-loader',
-            exclude: /node_modules/,
-            query: {
-                preset: ['es2015','react']
-            }                
-        }]
+    module: {
+        loaders: [
+            {
+                test: /.jsx?$/,
+                loader: 'babel-loader',
+                exclude: /node_modules/,
+                query: {
+                    presets: ['es2015','react']
+                }                
+            }
+        ]
     }
 }
