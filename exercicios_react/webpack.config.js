@@ -8,18 +8,19 @@ module.exports = {
     },
     devServer: {
         port: 8080,
-        contentBase: './public'
+        contentBase: './public',
+    },
+    resolve: {
+        extensions: ['', '.js', '.jsx']
     },
     module: {
-        loaders: [
-            {
-                test: /.jsx?$/,
-                loader: 'babel-loader',
-                exclude: /node_modules/,
-                query: {
-                    presets: ['es2015','react']
-                }                
+        loaders: [{
+            test: /.js[x]?$/,
+            loader: 'babel-loader',
+            exclude: /node_modules/,
+            query: {
+                presets: ['es2015', 'react'],
             }
-        ]
+        }]
     }
 }

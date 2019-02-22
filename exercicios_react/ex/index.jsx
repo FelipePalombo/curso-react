@@ -1,4 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import {Primeiro, Segundo} from './componente'
 
-ReactDOM.render(<h1>Welcome Friend</h1>, document.getElementById('app'))
+ReactDOM.render(
+<div> 
+    < Primeiro value="Meu primeiro Componente!" /> 
+    < Segundo uiuiupapito="Meu segundo Componente!"/> 
+</div>, 
+document.getElementById('app'))
